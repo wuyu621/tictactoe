@@ -55,11 +55,11 @@ function App() {
   return (
     <section className="mx-auto max-w-6xl p-16 h-full ">
       <h1 className="text-4xl font-bold text-center"> Welcome to TicTacToe</h1>
-      <h1 className="mt-16 text-2xl font-bold text-center capitalize border-dashed border-4 border-violet-600 p-4 ">
+      <h1 className="mt-16 text-2xl font-bold text-center capitalize border-dashed border-4 border-violet-600 p-4">
         {gameStatus()}
       </h1>
-      <div className="mt-16 grid grid-cols-6">
-        <div className="m-auto col-span-4">
+      <div className="mt-16 grid gap-16 md:grid-cols-7">
+        <div className="mx-auto md:col-span-4">
           <Board
             xIsNext={xIsNext}
             squares={currentSquares}
@@ -68,7 +68,7 @@ function App() {
             winningLines={winningLines}
           />
         </div>
-        <div className="col-span-2">
+        <div className="md:col-span-3">
           <GameInfos history={history} jumpTo={jumpTo} />
         </div>
       </div>
