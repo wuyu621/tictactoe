@@ -4,7 +4,7 @@ function GameInfos({ history, jumpTo }) {
   return (
     <ul className="flex flex-col gap-y-2">
       {history.map((_, move) => {
-        console.log(move);
+        // console.log(move);
         let description;
         if (move > 0) {
           description = "Go to move #" + move;
